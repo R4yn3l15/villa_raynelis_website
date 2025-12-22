@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Raynelis Villa</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="blob" style="top: 10%; left: 10%;"></div>
+    <div class="blob" style="bottom: 20%; right: 10%; background: radial-gradient(circle, rgba(248, 56, 130, 0.2) 0%, rgba(0,0,0,0) 50%);"></div>
+
+    <nav>
+        <div class="logo" onclick="location.href='/villa_raynelis_website/'" style="cursor:pointer"></div>
+        <ul>
+            <li><a href="/villa_raynelis_website/">Home</a></li>
+            <li><a href="/villa_raynelis_website/work.html">Projects</a></li>
+            <li><a href="/villa_raynelis_website/blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <h1 class="gradient-text" style="margin-bottom: 20px; font-size: 50px; text-align: center;">Expressions (Closer)</h1>
+        
+        <h1 id="visuals" class="gradient-text" style="margin: 40px 0 20px 0; text-align: center;">Interactive Visuals</h1>
+        <div class="project-showcase" style="background: var(--card-bg); padding: 30px; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 28px; text-align: center;">
+            <div style="position: relative; display: inline-block; width: 100%; max-width: 900px;">
+                <video controls controlsList="nodownload" oncontextmenu="return false;" autoplay muted loop style="width: 100%; height: auto; border-radius: 15px; border: 1px solid rgba(0, 0, 0, 0.1); display: block;">
+                    <source src="Expressions - Raynelis Villa.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 50px); z-index: 10;" oncontextmenu="return false;"></div>
+            </div>
+            <p style="color: var(--text-muted); margin-top: 20px;">Real-time generative visuals driven by facial pose recognition.</p>
+        </div>
+
+        <div class="card" style="text-align: left; margin-top: 60px;">
+            <h3 style="text-align: center;">Concept: Closer</h3>
+            <p>An interactive visual experience exploring relationships and interactions within a space through real-time generative visuals. This project utilizes pose recognition to influence a particle environment.</p>
+            <h3>Tools & Resources</h3>
+            <ul>
+                <li>TouchDesigner</li>
+                <li>OpenCV & TensorFlow (Pose Recognition via Laptop Camera)</li>
+                <li>ParticleGPU</li>
+            </ul>
+        </div>
+
+        <h1 class="gradient-text" style="margin: 60px 0 20px 0; text-align: center;">Visual Stills</h1>
+        <div class="project-showcase" style="margin-top: 40px; background: var(--card-bg); padding: 30px; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 28px;">
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <img src="Still 1.png" alt="Still 1" style="flex: 1; min-width: 250px; max-width: 32%; height: auto; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img src="Still 2.png" alt="Still 2" style="flex: 1; min-width: 250px; max-width: 32%; height: auto; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img src="Still 3.png" alt="Still 3" style="flex: 1; min-width: 250px; max-width: 32%; height: auto; border: 1px solid rgba(0, 0, 0, 0.1);">
+            </div>
+        </div>
+
+        <h1 class="gradient-text" style="margin: 60px 0 20px 0; text-align: center;">Project Timeline</h1>
+        <div class="project-showcase" style="background: var(--card-bg); padding: 40px; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 28px; text-align: left;">
+            <div style="border-left: 2px solid var(--mesh-grad); padding-left: 30px; margin-left: 10px;">
+                <div style="margin-bottom: 50px; position: relative;">
+                    <div style="position: absolute; left: -39px; top: 5px; width: 15px; height: 15px; border-radius: 50%; background: var(--mesh-grad);"></div>
+                    <h4 style="margin: 0; color: var(--text-main);">Weeks 1–4: Preproduction & Asset Creation</h4>
+                    <p style="margin: 5px 0; font-size: 0.95rem; color: var(--text-muted);">Finalized concept and storyboard drawings.</p>
+                </div>
+
+                <div style="margin-bottom: 0; position: relative;">
+                    <div style="position: absolute; left: -39px; top: 5px; width: 15px; height: 15px; border-radius: 50%; background: var(--mesh-grad);"></div>
+                    <h4 style="margin: 0; color: var(--text-main);">August 2025: Selected Contestant by TrikFilm</h4>
+                    <p style="margin: 5px 0; font-size: 0.95rem; color: var(--text-muted);">Selected by Trikfilm for international interactive projects.</p>
+                    
+                    <div style="position: relative; display: block; margin: 80px auto 20px auto; width: fit-content;">
+                        <img src="TrikFilmSelection.jpeg" alt="TrikFilm Official Selection" style="display: block; min-width: 250px; max-width: 350px; height: auto; border: 1px solid rgba(0, 0, 0, 0.1);">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;" oncontextmenu="return false;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="prototypes" class="gradient-text" style="margin: 60px 0 20px 0; text-align: center;">Prototyping</h1>
+        <div class="project-showcase" style="background: var(--card-bg); padding: 30px; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 28px;">
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <div style="position: relative; display: inline-block; width: 100%; max-width: 900px; margin-bottom: 20px;">
+                    <video controls controlsList="nodownload" oncontextmenu="return false;" autoplay muted loop style="width: 100%; border-radius: 15px; border: 1px solid rgba(0, 0, 0, 0.1);">
+                        <source src="PSDraft1.Fire.Video.mp4" type="video/mp4">
+                    </video>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 50px); z-index: 10;" oncontextmenu="return false;"></div>
+                </div>
+                </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <a href="index.html" class="contact-btn">Back to Home</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

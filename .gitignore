@@ -1,0 +1,31 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Design Source Files (Hide these to keep repo small)
+*.psd
+*.ai
+*.sketch
+*.fig
+*.png
+*.jpeg
+*.jpg
+*.mp4
+*.pdf
+
+# Text Editor / IDE Settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local Environment / Logs
+.env
+*.log
+npm-debug.log*
+
+# Folders you might add later (like if you use Node.js)
+node_modules/
+dist/
+build/
