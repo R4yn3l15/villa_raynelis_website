@@ -1,0 +1,21 @@
+{
+  "name": "villa_raynelis_website",
+  "version": "1.0.0",
+  "description": "Raynelis Villa's Portfolio Website",
+  "homepage": "https://github.com/R4yn3l15/villa_raynelis_website#readme",
+  "bugs": {
+    "url": "https://github.com/R4yn3l15/villa_raynelis_website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R4yn3l15/villa_raynelis_website.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Raynelis Villa",
+  "type": "module",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true
+}
