@@ -130,6 +130,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    nav ul { display: none; }
-    .container { padding: 40px 5%; }
+    nav a { font-size: 0.8rem; }
+    nav { padding: 1rem 5%; }
 }
