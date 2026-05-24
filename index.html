@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Raynelis Villa</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jura:wght@300..700&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="blob" style="top: 10%; left: 10%;"></div>
-    <div class="blob" style="bottom: 20%; right: 10%; background: radial-gradient(circle, rgba(248, 56, 130, 0.2) 0%, rgba(0,0,0,0) 50%);"></div>
-
+    <div class="blob" style="top: 10%; left: -10%;"></div>
+    <div class="blob" style="top: 50%; right: -10%; width: 50vw; height: 50vw;"></div>
+    
     <nav>
-        <div class="logo" onclick="location.href='index.html'" style="cursor:pointer"></div>
+        <a href="index.html" class="logo-text">R. Villa</a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Projects</a></li>
@@ -21,33 +24,41 @@
         </ul>
     </nav>
 
-    <header class="hero">
-        <h1>Hi, I'm <span class="gradient-text">Raynelis Villa</span></h1>
-        <p>Designer and Creative Programmer.</p>
+    <header class="hero text-layout-wrapper"> 
+        <div class="hero-content">
+            <h1 class="special-heading">Raynelis Villa</h1>
+            <p>Designer and Creative Programmer.</p>
+        </div>
     </header>
 
     <section class="container" id="projects">
         <h2 class="section-title gradient-text">Creations and Works</h2>
         <div class="grid">
+            <div class="card" onclick="location.href='Delicacy.html'" style="cursor:pointer">
+                <div class="card-orb">May 2026</div>
+                <h3>Delicacy</h3>
+                <p>A restaurant cleanliness website.</p>
+            </div>
+
             <div class="card" onclick="location.href='Gender_Inequalities.html'" style="cursor:pointer">
                 <div class="card-orb">April 2026</div>
                 <h3>Working Women Second Shift</h3>
-                <p>A poster built from research and Adobe Illustrator.</p>
-            </div>
-
-            <div class="card" onclick="location.href='Loneliness_Inequalities.html'">
-                <div class="card-orb">Dec 2025</div>
-                <h3>Loneliness Mirrors Social Inequalities</h3>
-                <p>A loneliness campaign built from research and Adobe Illustrator.</p>
+                <p>A gender-inequality poster.</p>
             </div>
             
-            <div class="card" onclick="location.href='Expressions.html'">
+            <div class="card" onclick="location.href='Loneliness_Inequalities.html'" style="cursor:pointer">
+                <div class="card-orb">Dec 2025</div>
+                <h3>Loneliness Mirrors Social Inequalities</h3>
+                <p>A loneliness campaign poster and social media story collection.</p>
+            </div>
+            
+            <div class="card" onclick="location.href='Expressions.html'" style="cursor:pointer">
                 <div class="card-orb">May 2025</div>
                 <h3>Expressions</h3>
                 <p>An interactive installation created with TouchDesigner that uses facial expressions to alter particle effect visuals.</p>
             </div>
 
-            <div class="card" onclick="location.href='Neonova.html'">
+            <div class="card" onclick="location.href='Neonova.html'" style="cursor:pointer">
                 <div class="card-orb">May 2025</div>
                 <h3>Neonova: IoT Hugs The Lanes</h3>
                 <p>Software documentation for IoT Hugs The Lanes covering architecture for an automated self-driving vehicle software.</p>
@@ -78,14 +89,7 @@
 
     <footer id="contact">
         <h2 class="gradient-text">Get In Touch</h2>
-        <p class="contact-btn" onclick="window.location.href='https://www.linkedin.com/in/raynelis-v/" style="cursor:pointer">LinkedIn</p>
-        
-        <div class="copyright-notice">
-            <p>&copy; 2025 Raynelis Villa. All Rights Reserved.</p>
-            <p style="font-size: 0.8rem; opacity: 0.6; max-width: 600px; margin: 10px auto;">
-                All original content, including text and images, is protected under international copyright law.
-            </p>
-        </div>
+        <p class="button" onclick="window.location.href='https://www.linkedin.com/in/raynelis-v/" style="cursor:pointer">LinkedIn</p>
     </footer>
 
     <script src="script.js"></script>

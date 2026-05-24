@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Raynelis Villa</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jura:wght@300..700&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="blob" style="top: 10%; left: 10%;"></div>
     <div class="blob" style="bottom: 20%; right: 10%; background: radial-gradient(circle, rgba(248, 56, 130, 0.2) 0%, rgba(0,0,0,0) 50%);"></div>
 
     <nav>
-        <div class="logo" onclick="location.href='/villa_raynelis_website'" style="cursor:pointer"></div>
+        <a href="index.html" class="logo-text">R. Villa</a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Projects</a></li>
@@ -27,14 +30,22 @@
         <h1 id="posters" class="gradient-text" style="margin: 40px 0 20px 0; text-align: center;">Poster</h1>
         <div class="project-showcase" style="background: var(--card-bg); padding: 30px; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 28px;">
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <img src="./Gender_Contents/gender_print.jpg" alt="Poster 1" style="flex: 1; min-width: 250px; max-width: 70%; height: auto; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <div style="flex: 1; min-width: 200px; max-width: 50%; overflow: hidden; border: 1px solid rgba(197, 210, 248, 0.15);"
+                     onmousemove="const rect = this.getBoundingClientRect(); const x = ((e = window.event).clientX - rect.left) / rect.width * 100; const y = (e.clientY - rect.top) / rect.height * 100; const img = this.querySelector('img'); img.style.transformOrigin = `${x}% ${y}%`; img.style.transform = 'scale(2)';"
+                     onmouseleave="const img = this.querySelector('img'); img.style.transform = 'scale(1)'; img.style.transformOrigin = 'center center';">
+                    
+                    <img src="./Gender_Contents/gender_print.jpg" 
+                         alt="Poster 1" 
+                         style="width: 100%; height: auto; display: block; cursor: zoom-in; transition: transform 0.1s ease, transform-origin 0.1s ease;">
+                </div>
             </div>
         </div>
 
         <div class="card" style="text-align: left; margin-top: 60px;">
-            <h3 style="text-align: center;">A Social Poster</h3>
+            <h3>A Social Poster</h3>
             <p>This project was created to bring social awareness on gender inequality gaps through visuals. This campaign includes a poster that 
                 presents the idea of women working the second shift. The second shift is the unpaid labor that women do outside of their career working hours.</p>
+            <br>
             <h3>Tool Used</h3>
             <ul>
                 <li>Adobe Illustrator</li>
@@ -77,14 +88,25 @@
         <h1 id="prototypes" class="gradient-text" style="margin: 60px 0 20px 0; text-align: center;">Prototyping</h1>
         <div class="project-showcase" style="background: var(--card-bg); padding: 30px; border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 28px;">
             <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <img src="./Gender_Contents/gender_prototype.png" alt="Prototype" style="flex: 1; min-width: 250px; max-width: 70%; height: auto; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <div style="flex: 1; min-width: 200px; max-width: 35%; overflow: hidden; border: 1px solid rgba(197, 210, 248, 0.15);"
+                     onmousemove="const rect = this.getBoundingClientRect(); const x = ((e = window.event).clientX - rect.left) / rect.width * 100; const y = (e.clientY - rect.top) / rect.height * 100; const img = this.querySelector('img'); img.style.transformOrigin = `${x}% ${y}%`; img.style.transform = 'scale(2)';"
+                     onmouseleave="const img = this.querySelector('img'); img.style.transform = 'scale(1)'; img.style.transformOrigin = 'center center';">
+                    
+                     <img src="./Gender_Contents/gender_prototype.png"
+                          alt="Prototype"
+                          style="width: 100%; height: auto; display: block; cursor: zoom-in; transition: transform 0.1s ease, transform-origin 0.1s ease;">
+                </div>
             </div>
         </div>
 
         <div style="text-align: center; margin-top: 80px;">
-            <a href="./index.html" class="contact-btn">Back to Home</a>
+            <a href="./index.html" class="button">Back to Home</a>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Raynelis Villa.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

@@ -1,36 +1,75 @@
 :root {
-    /* Updated to Cream Palette */
-    --bg-light: #fdfaf5; /* Cream background */
-    --card-bg: rgba(0, 0, 0, 0.03); /* Subtle dark glass effect */
-    --primary-grad: linear-gradient(45deg, #ff0099, #d79a00, #ff008c);
-    --mesh-grad: linear-gradient(90deg, #ffaa00 0%, #ff0066 50%, #ff0099 100%);
-    --text-main: #4d0c0c; /* Dark charcoal text */
-    --text-muted: #555555; /* Muted gray for subtitles */
+    --bg-light: #fdfaf5; 
+    --card-bg: rgba(0, 0, 0, 0.03); 
+    --primary-grad: 
+        radial-gradient(at 0% 0%, #ff57bc 0px, transparent 50%),
+        radial-gradient(at 100% 0%, #ff85ce 0px, transparent 50%),
+        radial-gradient(at 50% 100%, #ff9ad7 0px, transparent 50%),
+        #ffd499; 
+    --mesh-grad: linear-gradient(90deg, #ffae3d 0%, #ff60bf 50%, #ff35ae 100%);
+    --text-main: #32000f;
+    --text-muted: #555555; 
+    --accent-glow: rgba(255, 0, 153, 0.15);
 }
 
 * { box-sizing: border-box; }
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-light); /* Cream */
+    font-family: "Jura", sans-serif;
+    font-size: large;
+    background-color: var(--bg-light); 
+    background-image: radial-gradient(rgba(255, 0, 102, 0.04) 1px, transparent 1px);
+    background-size: 16px 16px;
+    
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
 }
 
-/* Background Blobs - Adjusted for Light Mode */
+.hero h1, body h1.special-heading {
+    font-family: 'Major Mono Display', cursive;
+    font-size: clamp(2.5rem, 8vw, 4rem); 
+    margin-bottom: 1rem; 
+    color: var(--text-main);
+}
+
+h1.special-heading {
+    font-family: 'Major Mono Display', cursive;
+    display: inline-block;
+    background: var(--mesh-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent !important;
+    animation: gradientNeonGlow 3s ease-in-out infinite alternate;
+    will-change: filter;
+}
+
+@keyframes gradientNeonGlow {
+    0% {
+        filter: drop-shadow(0 2px 4px rgba(255, 96, 191, 0.2));
+    }
+    100% {
+        filter: drop-shadow(0 4px 12px rgba(255, 96, 191, 0.65))
+                drop-shadow(0 8px 24px rgba(255, 53, 174, 0.35));
+    }
+}
+
 .blob {
     position: fixed;
-    width: 40vw;
-    height: 40vw;
+    width: 45vw;
+    height: 45vw;
+    min-width: 350px;
+    min-height: 350px;
     background: radial-gradient(circle, rgba(255, 0, 153, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
     filter: blur(100px);
-    z-index: -1;
+    z-index: -3; 
     pointer-events: none;
+    border-radius: 50%;
 }
 
-/* Responsive Nav */
 nav {
     display: flex;
     justify-content: space-between;
@@ -38,27 +77,97 @@ nav {
     padding: 1.5rem 10%;
     position: sticky;
     top: 0;
-    background: rgba(253, 250, 245, 0.8); /* Semi-transparent cream */
+    background: rgba(253, 250, 245, 0.8); 
     backdrop-filter: blur(12px);
     z-index: 100;
 }
 
 nav .logo { width: 35px; height: 35px; border-radius: 50%; background: var(--mesh-grad); }
 nav ul { display: flex; list-style: none; gap: 2rem; }
-nav a { text-decoration: none; color: var(--text-muted); font-size: 0.9rem; transition: 0.3s; }
-nav a:hover { color: var(--text-main); }
 
-.contact-btn {
+nav a { 
+    text-decoration: none; 
+    color: var(--text-muted); 
+    font-size: 0.9rem; 
+    transition: all 0.3s ease;
+}
+
+nav a:hover { 
+    color: var(--text-main); 
+    text-shadow: 0 2px 4px var(--accent-glow);
+}
+
+nav a.logo-text {
+    font-family: 'Major Mono Display', cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ff53ba;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav a.logo-text:hover {
+    color: #ff9429;
+    text-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.text-layout-wrapper {
+    position: relative;
+    overflow: visible; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5; 
+}
+
+.deco-graphic {
+    position: absolute;
+    height: auto;
+    pointer-events: none; 
+    opacity: 0.25; 
+    transition: transform 0.5s ease;
+}
+
+.deco-left {
+    width: 180px;
+    left: -5%;
+    top: 20%;
+    transform: rotate(-15deg);
+}
+
+.deco-right {
+    width: 220px;
+    right: -8%;
+    bottom: 10%;
+    transform: rotate(12deg);
+}
+
+.text-layout-wrapper:hover .deco-graphic {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.button {
     background: var(--mesh-grad);
     padding: 10px 22px;
     border-radius: 30px;
     color: white !important;
     font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease;
+    text-decoration: none;
 }
 
-/* Hero Section */
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--accent-glow);
+}
+
 .hero { text-align: center; padding: 120px 20px; }
-.hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 1rem; color: var(--text-main); }
 
 .hero p {
     max-width: 550px;
@@ -72,7 +181,6 @@ nav a:hover { color: var(--text-main); }
     -webkit-text-fill-color: transparent;
 }
 
-/* Responsive Grid */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -87,10 +195,9 @@ nav a:hover { color: var(--text-main); }
     gap: 25px;
 }
 
-/* Glassmorphism Cards - Updated for Light Mode */
 .card {
     background: var(--card-bg);
-    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle dark border */
+    border: 1px solid rgba(0, 0, 0, 0.05); 
     border-radius: 28px;
     padding: 40px;
     transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1);
@@ -98,13 +205,14 @@ nav a:hover { color: var(--text-main); }
     text-align: center;
 }
 
-.card h3 { color: var(--text-main); }
-.card p { color: var(--text-muted); }
+.card h3 { color: var(--text-main); margin-top: 0; }
+.card p { color: var(--text-muted); margin-bottom: 0; }
 
 .card:hover {
     background: rgba(0, 0, 0, 0.06);
     transform: translateY(-10px);
     border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(255, 0, 153, 0.04);
 }
 
 .card-orb {
@@ -121,11 +229,10 @@ nav a:hover { color: var(--text-main); }
     box-shadow: 0 10px 30px rgba(255, 0, 153, 0.2);
 }
 
-/* Footer */
 footer { 
     text-align: center; 
     padding: 100px 10%; 
-    border-top: 1px solid rgba(0,0,0,0.05); 
+    border-top: 1px solid rgba(0, 0, 0, 0.05); 
     color: var(--text-muted);
 }
 

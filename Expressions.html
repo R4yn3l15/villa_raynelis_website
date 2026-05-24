@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expressions | Raynelis Villa</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jura:wght@300..700&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="blob" style="top: 10%; left: 10%;"></div>
     <div class="blob" style="bottom: 20%; right: 10%; background: radial-gradient(circle, rgba(248, 56, 130, 0.2) 0%, rgba(0,0,0,0) 50%);"></div>
 
     <nav>
-        <div class="logo" onclick="location.href='index.html'" style="cursor:pointer"></div>
+        <a href="index.html" class="logo-text">R. Villa</a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Projects</a></li>
@@ -39,8 +42,9 @@
         </div>
 
         <div class="card" style="text-align: left; margin-top: 60px;">
-            <h3 style="text-align: center;">Concept: Closer</h3>
+            <h3>Concept: Closer</h3>
             <p>An interactive visual experience exploring relationships and interactions within a space through real-time generative visuals. This project utilizes pose recognition to influence 3D environments.</p>
+            <br>
             <h3>Tools & Resources</h3>
             <ul>
                 <li>TouchDesigner</li>
@@ -125,9 +129,14 @@
         </div>
 
         <div style="text-align: center; margin-top: 80px;">
-            <a href="index.html" class="contact-btn" style="text-decoration:none;">Back to Home</a>
+            <a href="index.html" class="button" style="text-decoration:none;">Back to Home</a>
         </div>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Raynelis Villa. Built using OpenCV & TensorFlow.</p>
+    </footer>
+
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="script.js"></script>
 </body>
